@@ -433,16 +433,18 @@ li{
     color: white;
     font-size: 30px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: 1s ; 
 }
 
 .eliBtn:hover {
     padding: 20px 110px;
+    
 }
 
 .container4 {
     padding: 50px 50px;
     width: 100%;
-    background-color: #423E61;
+    background-color: #17171d;
 }
 
 .hap {
@@ -494,6 +496,7 @@ li{
 
 .planTxt{
     width: 30%;
+    max-width: 70%;
     height: 100%;
     border-right:white solid 7px;
     background: linear-gradient(45deg, #0F3460, #533483, #E94560);
@@ -505,19 +508,28 @@ li{
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     box-shadow: 5px 0 5px -5px rgb(0, 0, 0);
+    transition:width 1s;
 }
 
+
 .planImg{
-    width: 70%;
+    position: inherit;
+    width: 100%;
     height: 100%;
     background-color: #0F3460;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     background: linear-gradient(to left, transparent 80%, rgb(22, 21, 21)),
     url(images/marsBSE1.jpg);
+    min-width: 30%;
     background-size: 100% 100%;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat; 
 }
+
+.planTxt:hover {
+    width: 110%;
+}
+
 
 .shop {
     width: 100%;
@@ -592,7 +604,7 @@ li{
     padding:30px 0px;
     font-family: 'Play', sans-serif;
     text-align:center;
-    margin-top: 50px;
+    margin-top: 10px;
     }
     
     .footer .row{
