@@ -28,7 +28,7 @@
 
       <h1>Login</h1>
       <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">
-      <p>Please fill in this form to login to your account.</p>
+      <p>Please fill in this form to login to your account...aasd.</p>
       <label for="uname"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
   
