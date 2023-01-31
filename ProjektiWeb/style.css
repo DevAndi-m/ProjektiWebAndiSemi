@@ -2,11 +2,11 @@
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
-    font-family: 'Space Grotesk', sans-serif;
 }
 
 body {
     background-color: black;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 a {
@@ -19,19 +19,6 @@ a:hover {
     color: #E94560;
 }
 
-#header1{
-    font-size: 51px;
-    padding-bottom: 10px;
-} #header3 {font-size: 18px;}
-
-
-
-#header {
-    background: -webkit-linear-gradient(45deg, #0F3460, #533483, #E94560);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 #navbar {
     list-style-type: none;
     padding-right: 40px;
@@ -41,7 +28,6 @@ a:hover {
     align-items: center;
     padding-bottom: 50px;
 }
-
 
 li{
     padding-right: 40px; 
@@ -59,6 +45,17 @@ li{
 
 #logo {
     height: 80px;
+}
+
+#header1{
+    font-size: 51px;
+    padding-bottom: 10px;
+} #header3 {font-size: 18px;}
+
+#header {
+    background: -webkit-linear-gradient(45deg, #0F3460, #533483, #E94560);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .container1 {
@@ -433,7 +430,7 @@ li{
     color: white;
     font-size: 30px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    transition: 1s ; 
+    transition: 100ms; 
 }
 
 .eliBtn:hover {
@@ -470,19 +467,30 @@ li{
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     box-shadow: 5px 0 5px -5px rgb(0, 0, 0);
+    transition:width 400ms, background-color 1s;
 }
 
 .hapImg {
     width: 70%;
     height: 100%;
-    background-color: #0F3460;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     background: linear-gradient(to left, transparent 80%, rgb(22, 21, 21)),
-    url(images/SpacePeopl2.jpg);
+    url(images/SpacePeopl2.jpg);   
     background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
+    transition: background-color 1s, width 20ms;
 }
+
+.hapTxt:hover {
+    width: 100%;
+}
+
+.hapTxt:hover ~ .hapImg {
+    width: 0px;
+    color: black;
+} 
+
 
 .plan {
     width: 100%;
@@ -496,7 +504,6 @@ li{
 
 .planTxt{
     width: 30%;
-    max-width: 70%;
     height: 100%;
     border-right:white solid 7px;
     background: linear-gradient(45deg, #0F3460, #533483, #E94560);
@@ -508,27 +515,30 @@ li{
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     box-shadow: 5px 0 5px -5px rgb(0, 0, 0);
-    transition:width 1s;
+    transition:width 100ms, background-color 1s;
 }
 
 
-.planImg{
-    position: inherit;
-    width: 100%;
+.planImg{   
+    width: 70%;
     height: 100%;
-    background-color: #0F3460;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     background: linear-gradient(to left, transparent 80%, rgb(22, 21, 21)),
-    url(images/marsBSE1.jpg);
-    min-width: 30%;
+    url(images/marsBSE1.jpg);   
     background-size: 100% 100%;
     background-repeat: no-repeat; 
+    transition: background-color 1s, width 20ms;
 }
 
 .planTxt:hover {
-    width: 110%;
+    width: 100%;
 }
+
+.planTxt:hover ~ .planImg {
+    width: 0px;
+    color: black;
+} 
 
 
 .shop {
@@ -554,27 +564,49 @@ li{
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     box-shadow: 5px 0 5px -5px rgb(0, 0, 0);
+    transition:width 100ms, background-color 1s;
 }
 
 .shopImg {
     width: 70%;
     height: 100%;
-    background-color: #0F3460;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     background: linear-gradient(to left, transparent 80%, rgb(22, 21, 21)),
-    url(images/rocket\ to\ mars3.jpg);
+    url(images/rocket\ to\ mars3.jpg);   
     background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
+    transition: background-color 1s, width 20ms;
 }
+
+.shopTxt:hover {
+    width: 100%;
+}
+
+.shopTxt:hover ~ .shopImg {
+    width: 0px;
+} 
 
 .end {
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 100%;
-    align-items: flex-end;
-    margin: 0;
+    align-items:center;
+    margin: 50px 0 0 0;
+    font-weight: bold;
+}
+.end > a, .end > svg {
+    color: #533483;
+    transition: color 1s;
+}
+
+.end>a:hover, .end>svg:hover {
+    color: #E94560;
+}
+
+.endDiv svg{
+    position: absolute;
+    margin: 2px 0 0 5px;   
 }
 
 
