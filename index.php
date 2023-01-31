@@ -148,7 +148,7 @@
     <div class="container4" id="con4">
         <div class="hap">
                 <div class="hapTxt">
-                    <h2>Gravity too heavy?</h2>
+                    <h2 href="bookJourney.html">Gravity too heavy?</h2>
                 </div>
             <div class="hapImg">
                 
