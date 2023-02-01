@@ -15,13 +15,6 @@
 </head>
 <body>
 
-<?php
-  session_start();
-  if (!isset($_SESSION["id"])) {
-    header("Location: login.php");
-  }
-  ?>
-  <h1>Welcome, <?php echo $_SESSION["username"]; ?></h1>
 
     <ul id="navbar">
         <li id="logoli"> <a href="index.php"><img src="images/Logo.png" id="logo"></a></li>
