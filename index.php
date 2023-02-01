@@ -1,5 +1,6 @@
 
 <!-- color pallete: https://colorhunt.co/palette/16213e0f3460533483e94560 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <?php session_start();
+        require 'config.php';
+        $name = "";
+        if (!empty($_SESSION["id"])) {
+        $id = $_SESSION["id"];
+        $result = mysqli_query($conn, "SELECT name FROM tb_user WHERE id = '$id'");
+        $row = mysqli_fetch_assoc($result);
+        $name = $row["name"];
+        $name = ucfirst($name);
+        } ?>
+
+
 </head>
 <body>
 
@@ -21,7 +35,7 @@
         <li><a href="#con4">Book your journey</a></li>
         <li><a href="contactUs.php">Contact us</a></li>
         <li id="rightnavel"><a href="logout.php?logout">Logout</a></li>
-        <li id="rightnavel"></li>
+        <li> <span id="username"><?php echo $name; ?></span> </li>
     </ul>
 
     <div class="container1"> 
