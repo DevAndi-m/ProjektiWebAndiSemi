@@ -13,14 +13,13 @@
 </head>
 <body>
     <div class="start">
-        <ul id="navbar">
-            <li id="logoli"> <a href="index.html"><img src="images/Logo.png" id="logo"></a></li>
-            <li><a class="here">Book your journey</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="contactUs.html">Contact us</a></li>
-            <li id="rightnavel"><a href="signUp.html">Sign up</a></li>
-            <li id="rightnavel"><a href="login.html">Login</a></li>
-        </ul>
+    <ul id="navbar">
+        <li id="logoli"> <a href="index.php"><img src="images/Logo.png" id="logo"></a></li>
+        <li><a href="#con4">Book your journey</a></li>
+        <li><a href="contactUs.php">Contact us</a></li>
+        <li id="rightnavel"><a href="signUp.php">Sign up</a></li>
+        <li id="rightnavel"><a href="login.php">Login</a></li>
+    </ul>
         <h1 class="titleMain">Lorem Ipsum</h1>
         <p class="descMain">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio temporibus pariatur praesentium cum facere consequatur quod distinctio hic adipisci eaque nam velit ducimus, vitae natus cumque possimus voluptatibus tenetur dignissimos! lore</p>
     </div>   

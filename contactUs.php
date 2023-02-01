@@ -8,16 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
     </head>
     <body>   
-        <ul id="navbar">
-
-            <li id="logoli"> <a href="index.html"><img src="images/Logo.png" id="logo"></a></li>
-            <li>Book your journey</li>
-            <li>Shop</li>
-            <li><a href="contactUs.html">Contact us</a></li>
-            <li id="rightnavel"><a href="signUp.html">Sign up</a></li>
-            <li id="rightnavel"><a href="login.html">Login</a></li>
-            
-        </ul>
+    <ul id="navbar">
+        <li id="logoli"> <a href="index.php"><img src="images/Logo.png" id="logo"></a></li>
+        <li><a href="#con4">Book your journey</a></li>
+        <li><a href="contactUs.php">Contact us</a></li>
+        <li id="rightnavel"><a href="signUp.php">Sign up</a></li>
+        <li id="rightnavel"><a href="login.php">Login</a></li>
+    </ul>
 <div class="container">
     <form action="action_page.php">
   

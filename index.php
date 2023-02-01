@@ -1,3 +1,4 @@
+
 <!-- color pallete: https://colorhunt.co/palette/16213e0f3460533483e94560 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -13,15 +14,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-   
+
+<?php
+  session_start();
+  if (!isset($_SESSION["id"])) {
+    header("Location: login.php");
+  }
+  ?>
+  <h1>Welcome, <?php echo $_SESSION["username"]; ?></h1>
 
     <ul id="navbar">
-        <li id="logoli"> <a href="index.html"><img src="images/Logo.png" id="logo"></a></li>
+        <li id="logoli"> <a href="index.php"><img src="images/Logo.png" id="logo"></a></li>
         <li><a href="#con4">Book your journey</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="contactUs.html">Contact us</a></li>
-        <li id="rightnavel"><a href="signUp.html">Sign up</a></li>
-        <li id="rightnavel"><a href="login.html">Login</a></li>
+        <li><a href="contactUs.php">Contact us</a></li>
+        <li id="rightnavel"><a href="logout.php?logout">Logout</a></li>
+        <li id="rightnavel"></li>
     </ul>
 
     <div class="container1"> 
@@ -148,7 +155,7 @@
     <div class="container4" id="con4">
         <div class="hap">
                 <div class="hapTxt">
-                    <h2 href="bookJourney.html">Gravity too heavy?</h2>
+                    <h2><a href="bookJourney.php">Gravity too heavy?</a></h2>
                 </div>
             <div class="hapImg">
                 
@@ -209,7 +216,6 @@
         </div>
         </div>
         </footer>
-        
 
     <script src="home.js"></script>
 </body>
