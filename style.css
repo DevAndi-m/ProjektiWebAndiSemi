@@ -34,6 +34,10 @@
     size: 20px;
   }
   
+  #username{
+    color: white;
+  }
+  
   #logoli {
     display: block;
     color: white;
