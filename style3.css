@@ -40,11 +40,51 @@ p{
 }
 
 
+<<<<<<< HEAD
 .container {
   padding: 120px 400px;
 background-color: black;
 outline: none;
 border: none;
+=======
+  
+ 
+  input[type=text], input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: white;
+  }
+  
+ 
+  button {
+    background-color: #20273b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+ 
+  button:hover {
+    background-color: #a8606c;
+  }
+  
+  h1{
+    color: white;
+  }
+  p{
+    color: white;
+  }
+  
+>>>>>>> 5094fcf2b6941bc682399f2809ece6bde1184eec
 
 }
 
