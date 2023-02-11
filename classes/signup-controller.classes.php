@@ -1,21 +1,18 @@
 <?php
 
-class SignupContr extends signUpUser {
+class SignupContr extends Signup {
 
-    private $name;
     private $username;
     private $email;
     private $psw;
     private $pswrepeat;
 
-    public function __construct($name, $username, $email, $psw, $pswrepeat) {
-        
-        $this->name = $name;
+    public function __construct($username, $email, $psw, $pswrepeat) {
+
         $this->username = $username;
         $this->email = $email;
         $this->psw = $psw;
         $this->pswrepeat = $pswrepeat;
-
     }
 
     public function signUpUser() {
@@ -52,7 +49,7 @@ class SignupContr extends signUpUser {
 
     private function emptyInput() {
         $result;
-        if(empty($this->name) || empty($this->username) || empty($this->email) || empty($this->psw) || empty($this->pswrepeat)) {
+        if(empty($this->username) || empty($this->email) || empty($this->psw) || empty($this->pswrepeat)) {
             $result = false;
         } else{
             $result = true;
@@ -64,7 +61,7 @@ class SignupContr extends signUpUser {
 
     private function invalidUsername() {
         $result;
-        if(!preg_match("/^[a-zA-Z0-9]*$/" , this->usename)){
+        if(!preg_match("/^[a-zA-Z0-9]*$/" , $this->usename)){
             $result = false;
         } else{
             $result = true;
@@ -91,7 +88,7 @@ class SignupContr extends signUpUser {
         if($this->psw !== $this->pswrepeat){
             $result = false;
         } else {
-            $result = false;
+            $result = true;
         }
         return $result;
     } 
@@ -101,10 +98,9 @@ class SignupContr extends signUpUser {
         if(!$this->checkUser($this->username, $this->email)){
             $result = false;
         } else {
-            $result = false;
+            $result = true;
         }
         return $result;
     } 
-
 }
 

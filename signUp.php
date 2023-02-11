@@ -1,3 +1,7 @@
+<?php 
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,13 +21,12 @@
     </ul>
 
     <body>  
-<form class="" action="inlcudes/signup.included.php" method="post" autocomplete="off">
+
     <div class="container">
+
+    <form class="" action="includes/signup.included.php" method="post" autocomplete="off">
       <h1>Sign Up</h1>
       <p>Please fill in this form to create an account.</p>
-
-      <label for="name"><b>Name</b></label>
-      <input type="text" placeholder="Enter Name" name="name" required>
 
       <label for="username"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="username" required>
@@ -43,11 +46,12 @@
   
       <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
   
+      <button type="submit" class="signupbtn" name="submit">Sign up</button>
+
+      </form>
       <div class="clearfix">
-       
-        <button type="submit" class="signupbtn" name="submit">Sign Up</button>
       </div>
     </div>
-  </form>
+
  </body>
   </html>

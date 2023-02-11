@@ -1,3 +1,8 @@
+<?php 
+$sql = "SELECT * FROM users";
+session_start();
+?>
+
 
 <!-- color pallete: https://colorhunt.co/palette/16213e0f3460533483e94560 -->
 
@@ -23,7 +28,11 @@
         <li><a href="#con4">Book your journey</a></li>
         <li><a href="contactUs.php">Contact us</a></li>
         <li id="rightnavel"><a href="logout.php?logout">Logout</a></li>
-        <li> <span id="username"></span> </li>
+        <li> 
+            <?php 
+                echo $_POST['username'];
+            ?>
+        </li>
     </ul>
 
     <div class="container1"> 

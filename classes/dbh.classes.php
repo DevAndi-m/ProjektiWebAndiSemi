@@ -1,5 +1,4 @@
 <?php
-
 class Dbh {
 
     protected function connect() {
@@ -7,12 +6,11 @@ class Dbh {
             $username = "root";
             $password = "";
             $dbh = new PDO('mysql:host=localhost;dbname=usersdatabaza', $username, $password);
-            return $dbh; 
+            return $dbh;
         }catch(PDOException $e){
             print "Error!: " . $e->getMessage() . "<br/>";
             die();
         }
     }
-
 }
 

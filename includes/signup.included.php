@@ -3,11 +3,10 @@
 if(isset($_POST["submit"])){
     
     //mi marr te dhenat
-    $name = $_POST[name];
-    $username = $_POST[username];
-    $email = $_POST[email];
-    $psw = $_POST[psw];
-    $pswrepeat = $_POST[pswrepeat];
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $psw = $_POST['psw'];
+    $pswrepeat = $_POST['pswrepeat'];
 
     //controlleri per signup (klase)
 
@@ -15,7 +14,7 @@ if(isset($_POST["submit"])){
     include "../classes/signup.classes.php";
     include "../classes/signup-controller.classes.php";
 
-    $signup = new SignupContr($name, $username, $email, $psw, $pswrepeat);
+    $signup = new SignupContr($username, $email, $psw, $pswrepeat);
 
     //kapsit e errorave dhe user signup
 
