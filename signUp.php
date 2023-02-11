@@ -1,35 +1,3 @@
-<?php
-require 'config.php';
-if(isset($_POST["submit"])){
-  $name = $_POST["name"];
-  $username = $_POST["username"];
-  $email = $_POST["email"];
-  $password = $_POST["psw"];
-  $confirmpassword = $_POST["psw-repeat"];
-  $duplicate = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$username' OR email = '$email'");
-
-  if(mysqli_num_rows($duplicate) > 0){
-    echo
-    "<script> alert('Username or Email is already taken'); </script>";
-  }
-  else{
-    if($password == $confirmpassword){
-      $query = "INSERT INTO tb_user (name, username, email, password) VALUES ('$name', '$username','$email','$password')";
-      mysqli_query($conn,$query);
-      echo
-      "<script> alert('Registation Successful');</script>";
-
-    }
-    else{
-      echo
-    "<script> alert('Password Does Not Match'); </script>";
-    }
-  }
-
-
-}
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -49,7 +17,7 @@ if(isset($_POST["submit"])){
     </ul>
 
     <body>  
-<form class="" action="#login.php" method="post" autocomplete="off">
+<form class="" action="inlcudes/signup.included.php" method="post" autocomplete="off">
     <div class="container">
       <h1>Sign Up</h1>
       <p>Please fill in this form to create an account.</p>
@@ -67,7 +35,7 @@ if(isset($_POST["submit"])){
       <input type="password" placeholder="Enter Password" name="psw" required>
   
       <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <input type="password" placeholder="Repeat Password" name="pswrepeat" required>
   
       <label>
         <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -77,7 +45,7 @@ if(isset($_POST["submit"])){
   
       <div class="clearfix">
        
-        <button type="submit" class="signupbtn" name='submit'>Sign Up</button>
+        <button type="submit" class="signupbtn" name="submit">Sign Up</button>
       </div>
     </div>
   </form>

@@ -1,29 +1,5 @@
 <?php
-session_start();
-require 'config.php';
 
-if (!empty($_SESSION["id"])) {
-  header("Location: index.php");
-}
-
-if (isset($_POST["submit"])) {
-  $username = $_POST["username"];
-  $password = $_POST["password"];
-  $result = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$username' OR email = '$username'");
-  $row = mysqli_fetch_assoc($result);
-  if (mysqli_num_rows($result) > 0) { 
-    if ($password == $row["password"]) {
-      $_SESSION["login"] = true;
-      $_SESSION["id"] = $row["id"];
-      $name = $row["username"];
-      header("Location: index.php");
-    } else {
-      echo "<script> alert('Wrong Password'); </script>";
-    }
-  } else {
-    echo "<script> alert('User Not Registered'); </script>";
-  }
-}
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +19,7 @@ if (isset($_POST["submit"])) {
     <li id="rightnavel"><a href="signUp.php">Sign up</a></li>
     <li id="rightnavel"><a href="login.php">Login</a></li>
   </ul>
-  <form class="" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
+  <form class="" action="includes/login.included.php" method="post">
     <div class="container">
       <h1>Login</h1>
       <p>Please fill in this form to login to your account...</p>
