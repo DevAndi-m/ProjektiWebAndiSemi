@@ -24,5 +24,22 @@ include './classes/dbh.classes.php';
     return $products;
 
     }
+    public static function addProduct($title, $description, $price) {
+        $dbh = new Dbh();
+        $stmt = $dbh->connect()->prepare("INSERT INTO products (title, description, price) VALUES (?, ?, ?)");
+        $stmt->execute([$title, $description, $price]);
+    }
+
+    public static function updateProduct($id, $title, $description, $price) {
+        $dbh = new Dbh();
+        $stmt = $dbh->connect()->prepare("UPDATE products SET title = ?, description = ?, price = ? WHERE id = ?");
+        $stmt->execute([$title, $description, $price, $id]);
+    }
+
+    public static function deleteProduct($id) {
+        $dbh = new Dbh();
+        $stmt = $dbh->connect()->prepare("DELETE FROM products WHERE id = ?");
+        $stmt->execute([$id]);
+    }
 }
 ?>

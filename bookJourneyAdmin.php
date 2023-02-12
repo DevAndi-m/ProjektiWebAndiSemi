@@ -2,21 +2,16 @@
 <?php 
 include './Product.php';
 session_start();
-
-if (isset($_SESSION['isAdmin'])) {
-    // Check if the user is logged in
-    if ($_SESSION['isAdmin'] == "true") {
-        // Check if the user is an admin
-        header("location: bookJourneyAdmin.php");
-        exit();
-    } 
-} else {
-    // Redirect the user to the login page
+$user_id = $_SESSION['userid'];
+if(!isset($_SESSION['userid'])){
     header("location: login.php");
     exit();
 }
-$products = Product::getAllProducts();
+// Product::addProduct($title, $description, $price);
+// Product::deleteProduct($id);
 
+
+$products = Product::getAllProducts();
 
 ?>
 <!DOCTYPE html>
@@ -84,6 +79,10 @@ $products = Product::getAllProducts();
                         </div>
                     </div>
                     <div class="final"> 
+                    <form action="delete_product.php" method="post">
+                    <input type="hidden" name="id" value="<?php echo $product->id; ?>">
+                    <input type="submit" value="Delete">
+                    </form>
                         <p>the ticket will appear on your shopping cart</p>
                     </div>
                     

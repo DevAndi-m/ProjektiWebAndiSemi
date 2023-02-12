@@ -1,16 +1,8 @@
 <?php 
 
 session_start();
-
-if (isset($_SESSION['isAdmin'])) {
-    // Check if the user is logged in
-    if ($_SESSION['isAdmin'] == "true") {
-        // Check if the user is an admin
-        header("location: indexAdmin.php");
-        exit();
-    } 
-} else {
-    // Redirect the user to the login page
+$user_id = $_SESSION['userid'];
+if(!isset($_SESSION['userid'])){
     header("location: login.php");
     exit();
 }

@@ -2,20 +2,10 @@
 
 session_start();
 
-if (isset($_SESSION['isAdmin'])) {
-    // Check if the user is logged in
-    if ($_SESSION['isAdmin'] == "true") {
-        // Check if the user is an admin
-        header("location: contactUsAdmin.php");
-        exit();
-    } 
-} else {
-    // Redirect the user to the login page
+if(!isset($_SESSION["userid"])){
     header("location: login.php");
     exit();
 }
-
-
 
 $sql = "SELECT * FROM users";
 
@@ -32,7 +22,7 @@ $sql = "SELECT * FROM users";
     <body>   
     <ul id="navbar">
         <li id="logoli"> <a href="index.php"><img src="images/Logo.png" id="logo"></a></li>
-        <li><a href="#con4">Book your journey</a></li>
+        <li><a href="bookJourney.php">Book your journey</a></li>
         <li><a href="contactUs.php">Contact us</a></li>
         <li id="rightnavel"><a href="logout.php?logout">Logout</a></li>
     </ul>
