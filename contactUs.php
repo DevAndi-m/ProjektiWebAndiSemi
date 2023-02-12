@@ -1,5 +1,14 @@
 <?php 
+
 session_start();
+
+if(!isset($_SESSION["userid"])){
+    header("location: login.php");
+    exit();
+}
+
+$sql = "SELECT * FROM users";
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,8 +24,7 @@ session_start();
         <li id="logoli"> <a href="index.php"><img src="images/Logo.png" id="logo"></a></li>
         <li><a href="#con4">Book your journey</a></li>
         <li><a href="contactUs.php">Contact us</a></li>
-        <li id="rightnavel"><a href="signUp.php">Sign up</a></li>
-        <li id="rightnavel"><a href="login.php">Login</a></li>
+        <li id="rightnavel"><a href="logout.php?logout">Logout</a></li>
     </ul>
 <div class="container">
     <form action="action_page.php">

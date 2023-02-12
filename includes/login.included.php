@@ -4,7 +4,7 @@ if(isset($_POST["submit"])){
     
     //mi marr te dhenat
     $username = $_POST['username'];
-    $psw = $_POST['psw'];
+    $psw = $_POST['password'];
 
     //controlleri per login (klase)
 
@@ -16,7 +16,7 @@ if(isset($_POST["submit"])){
 
     //kapsit e errorave dhe user signup
 
-    $login->loginUser();
+    $login->logUser();
 
     // mu kthy ne front page
 

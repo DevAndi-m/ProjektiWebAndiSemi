@@ -1,5 +1,15 @@
+
 <?php 
+include './Product.php';
 session_start();
+
+if(!isset($_SESSION["userid"])){
+    header("location: login.php");
+    exit();
+}
+$products = Product::getAllProducts();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,8 +30,7 @@ session_start();
         <li id="logoli"> <a href="index.php"><img src="images/Logo.png" id="logo"></a></li>
         <li><a href="#con4">Book your journey</a></li>
         <li><a href="contactUs.php">Contact us</a></li>
-        <li id="rightnavel"><a href="signUp.php">Sign up</a></li>
-        <li id="rightnavel"><a href="login.php">Login</a></li>
+        <li id="rightnavel"><a href="logout.php?logout">Logout</a></li>
     </ul>
         <h1 class="titleMain">Lorem Ipsum</h1>
         <p class="descMain">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio temporibus pariatur praesentium cum facere consequatur quod distinctio hic adipisci eaque nam velit ducimus, vitae natus cumque possimus voluptatibus tenetur dignissimos! lore</p>
@@ -38,12 +47,13 @@ session_start();
         </div> 
 
         <div class="container3">
+        <?php foreach($products as $product): ?>
             <div class="con3check">
                     <div class="ttl">
-                        <h1>Adventurer Edition</h1>
+                        <h1><?php echo $product->title; ?></h1>
                     </div>
                     <div class="dsc">
-                        <p>The best way to get some space for the first time. The adventurers ticket allows passangers to experience zero gravity to the fullest. To most a bargain, this ticket includes:</p>
+                        <p><?php echo $product->description; ?></p>
                     </div>
                     <div class="lst">
                         <ul class="offersOf">
@@ -57,7 +67,7 @@ session_start();
                     </div>
                     <div class="buy">
                         <div class="prc">
-                            <h2>$13,790</h2> 
+                            <h2>$<?php echo $product->price; ?></h2> 
                         </div>
                         <div class="prcBtn">
                             <button id="purchase">
@@ -68,69 +78,9 @@ session_start();
                     <div class="final"> 
                         <p>the ticket will appear on your shopping cart</p>
                     </div>
+                    
             </div>
-            <div class="con3check">
-                <div class="ttl">
-                    <h1>Adventurer Edition</h1>
-                </div>
-                <div class="dsc">
-                    <p>The best way to get some space for the first time. The adventurers ticket allows passangers to experience zero gravity to the fullest. To most a bargain, this ticket includes:</p>
-                </div>
-                <div class="lst">
-                    <ul class="offersOf">
-                        <li>Tasty & Noutritious food</li>
-                        <li>Up to Two 30 minute moonwalks</li>
-                        <li>Infinite access to the G1 telescopes</li>
-                        <li>Unlimited internet connection</li>
-                        <li>Medical assistance for any injuries</li>
-                        <li>Staying time: 13 days</li>
-                    </ul>
-                </div>
-                <div class="buy">
-                    <div class="prc">
-                        <h2>$13,790</h2> 
-                    </div>
-                    <div class="prcBtn">
-                        <button id="purchase">
-                            Purchase ticket
-                        </button>
-                    </div>
-                </div>
-                <div class="final"> 
-                    <p>the ticket will appear on your shopping cart</p>
-                </div>
-        </div>
-        <div class="con3check">
-            <div class="ttl">
-                <h1>Adventurer Edition</h1>
-            </div>
-            <div class="dsc">
-                <p>The best way to get some space for the first time. The adventurers ticket allows passangers to experience zero gravity to the fullest. To most a bargain, this ticket includes:</p>
-            </div>
-            <div class="lst">
-                <ul class="offersOf">
-                    <li>Tasty & Noutritious food</li>
-                    <li>Up to Two 30 minute moonwalks</li>
-                    <li>Infinite access to the G1 telescopes</li>
-                    <li>Unlimited internet connection</li>
-                    <li>Medical assistance for any injuries</li>
-                    <li>Staying time: 13 days</li>
-                </ul>
-            </div>
-            <div class="buy">
-                <div class="prc">
-                    <h2>$13,790</h2> 
-                </div>
-                <div class="prcBtn">
-                    <button id="purchase">
-                        Purchase ticket
-                    </button>
-                </div>
-            </div>
-            <div class="final"> 
-                <p>the ticket will appear on your shopping cart</p>
-            </div>
-        </div>
+            <?php endforeach; ?>
     </div>
 
     <div class="ratings">
