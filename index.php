@@ -42,7 +42,7 @@ $sql = "SELECT * FROM users";
     <ul id="navbar">
         
         <li id="logoli"> <a href="index.php"><img src="images/Logo.png" id="logo"></a></li>
-        <li><a href="#con4">Book your journey</a></li>
+        <li><a href="bookJourney.php">Book your journey</a></li>
         <li><a href="contactUs.php">Contact us</a></li>
         <li id="rightnavel"><a href="logout.php?logout">Logout</a></li>
     </ul>

@@ -31,9 +31,10 @@ $products = Product::getAllProducts();
     <div class="start">
     <ul id="navbar">
         <li id="logoli"> <a href="index.php"><img src="images/Logo.png" id="logo"></a></li>
-        <li><a href="#con4">Book your journey</a></li>
+        <li><a href="bookJourneyAdmin.php">Book your journey</a></li>
         <li><a href="contactUs.php">Contact us</a></li>
         <li id="rightnavel"><a href="logout.php?logout">Logout</a></li>
+        <li><a href="admin.php">Insights</a></li>
     </ul>
         <h1 class="titleMain">Lorem Ipsum</h1>
         <p class="descMain">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio temporibus pariatur praesentium cum facere consequatur quod distinctio hic adipisci eaque nam velit ducimus, vitae natus cumque possimus voluptatibus tenetur dignissimos! lore</p>

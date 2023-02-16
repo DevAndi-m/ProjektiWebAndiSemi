@@ -36,7 +36,7 @@ $products = Product::getAllProducts();
     <div class="start">
     <ul id="navbar">
         <li id="logoli"> <a href="index.php"><img src="images/Logo.png" id="logo"></a></li>
-        <li><a href="#con4">Book your journey</a></li>
+        <li><a href="bookJourney.php">Book your journey</a></li>
         <li><a href="contactUs.php">Contact us</a></li>
         <li id="rightnavel"><a href="logout.php?logout">Logout</a></li>
     </ul>
@@ -66,11 +66,11 @@ $products = Product::getAllProducts();
                     <div class="lst">
                         <ul class="offersOf">
                             <li>Tasty & Noutritious food</li>
-                            <li>Up to Two 30 minute moonwalks</li>
-                            <li>Infinite access to the G1 telescopes</li>
+                            <li>Comfortable residence</li>
+                            <li>Infinite access to anything desired</li>
                             <li>Unlimited internet connection</li>
                             <li>Medical assistance for any injuries</li>
-                            <li>Staying time: 13 days</li>
+                            <li>Cool views</li>
                         </ul>
                     </div>
                     <div class="buy">
@@ -92,87 +92,10 @@ $products = Product::getAllProducts();
     </div>
 
     <div class="ratings">
-        <h1>Ratings & Reviews</h1> 
+        <h1>Having issues?</h1> 
+        <p>Contact us here for any issues, information or feedback and we will be sure to reply as soon as possible.</p>
+        <a href="contactUs.php"><button class="contactBtn" href="contactUs.php">Contact us now</button></a>
     </div>
-
-    <div class="container4">
-        <div class="aveMsg"> 
-            <div class="averageRat">
-                <div class="star">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                </div>
-                <div class="starAverage">
-                    4.6
-                </div>
-            </div>
-            <div class="commentRating">
-                <div class="nameDateStars">
-                    <div class="name">
-                        <h3>John Doe</h3>
-                    </div>
-                    <div class="date">
-                        <p>1/31/2023</p>
-                    </div>  
-                    <div class="stars">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>  
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>  
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>  
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>  
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>  
-                        </svg>
-                    </div>
-                </div>
-                <div class="userMsg">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda possimus corrupti odit eveniet, fugiat, numquam delectus quidem minima iusto laboriosam nisi tempora. Ipsa repellendus quaerat sapiente laudantium nisi repellat tempore, neque temporibus quae. Eligendi deserunt ipsa voluptas iure numquam laboriosam officia totam harum doloremque ex, eaque sunt at magnam quis ratione delectus? Quod iusto, laudantium numquam maiores est hic asperiores quis quibusdam delectus facere natus laborum repellendus dolorum nisi aliquam?
-                    </p>
-                </div>
-            </div>
-            <div class="nextBtn">
-                <button class="nextComment">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div class="rate">
-            <h1>Have you visited space? If so please give your experience a review, it will help us out a lot!</h1>
-        </div>
-        <div class="rateStars">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>  
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>  
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>  
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>  
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>  
-            </svg>
-        </div>
-        <form>
-            <textarea placeholder="Your review here"></textarea>
-        </form>
-        <div class="sbmBtn">
-            <button id="submitBtn">Submit</button>
-        </div>
-    </div> 
 
     <div class="container1"> 
         <img class="mainImg" src="images/CupolaFinal.jpg"> 
@@ -189,11 +112,10 @@ $products = Product::getAllProducts();
         
         <div class="row">
         <ul>
-        <li><a href="#">Book a Journey</a></li>
-        <li><a href="#">Visit shop</a></li>
-        <li><a href="#">Contact us</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="contactUs.php">Contact us</a></li>
         <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Log in</a></li>
+        <li><a href="login.php">Log in</a></li>
         </ul>
         </div>
         

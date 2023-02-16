@@ -37,6 +37,7 @@ $sql = "SELECT * FROM users";
         <li><a href="#con4">Book your journey</a></li>
         <li><a href="contactUs.php">Contact us</a></li>
         <li id="rightnavel"><a href="logout.php?logout">Logout</a></li>
+        <li><a href="admin.php">Insights</a></li>
     </ul>
 
     <div class="container1"> 
